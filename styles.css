@@ -18,6 +18,8 @@ p {
 }
 
 
+/* Selectors uzduotis */
+
 ul li:last-child li:last-child,
 ul li:first-child li:nth-child(2) {
   color: red;
@@ -28,3 +30,26 @@ ul li:nth-of-type(2n) {
 
 
 
+/* CSS sablono uzduotis */
+
+header {
+  font-size: 30px;
+  height: 150PX;
+  background-color: coral;
+  margin-bottom: 10px;
+}
+
+aside {
+  background-color: cornflowerblue;
+  padding: 10px;
+}
+
+main {
+  background-color: darkgoldenrod;
+}
+
+footer {
+  font-size: 30px;
+  height: 100px;
+  background-color:green;
+}
