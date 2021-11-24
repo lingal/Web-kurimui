@@ -1,11 +1,30 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+  background-color: #ddf1d2;
 }
 
-.logo {
-  display: block;
-  max-width: 100px;
+
+table, th, td {
+  border: 2px double black;
 }
+
+table tr:nth-child(3) td:nth-child(5), table tr:last-child td:nth-child(5) {
+  text-align: center;
+}
+
+
+
+p {
+  color: red;
+}
+
+
+ul li:last-child li:last-child,
+ul li:first-child li:nth-child(2) {
+  color: red;
+}
+ul li:nth-of-type(2n) {
+  font-weight: bold;
+}
+
+
 
