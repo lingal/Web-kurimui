@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <style>
+.wrapper {
+  height: 50%;
+  width: 50vw;
+}
+
+      .static {
+        position: static;
+        top: 0;
+        left: 0;
+        height: 100px;
+        width: 100px;
+        background-color: cornflowerblue;
+      }
+
+      .absolute {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+
+      .relative {
+        position: relative;
+        top: 50px;
+        left: 50px;
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 50px;
+        left: 200px;
+        height: 100px;
+        width: 100px;
+        background-color: cornflowerblue;
+      }
+
+      .relative_2 {
+        position: relative;
+        top: 50px;
+        left: 200px;
+        height: 350px;
+        width: 350px;
+        background-color: green;
+        margin-top: 20px;
+      }
+      .relative_2 > div {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        height: 100px;
+        width: 100px;
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="static">
+        Static
+      </div>
+      <div class="absolute">Absolute</div>
+      <div class="relative">Relative</div>
+      <div class="fixed">Fixed</div>
+      <div class="relative_2">
+        Relative
+        <div>Absolute</div>
+      </div>
+        </body>
+    </div>
+</html>
