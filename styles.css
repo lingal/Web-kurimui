@@ -1,21 +1,53 @@
 body {
-  background-color: #ddf1d2;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'a h h'
+    'a m m'
+    'f f f';
+  gap: 3px;
+  grid-template-columns: 150px auto auto;
+  grid-template-rows: 100px auto 80px;
 }
 
+/* CSS sablono uzduotis */
 
-table, th, td {
-  border: 2px double black;
+header {
+  grid-area: h;
+  font-size: 30px;
+  display: grid;
+  place-items: center;
+  background-color:#fee440;
 }
 
-table tr:nth-child(3) td:nth-child(5), table tr:last-child td:nth-child(5) {
+aside {
+  grid-area: a;
+  padding: 10px;
+  background-color:#00bbf9;
+}
+
+main {
+  grid-area: m;
+  background-color:#f15bb5;
+}
+
+footer {
+  grid-area: f;
+  font-size: 30px;
+  background-color:#9b5de5;
+}
+
+h1 {
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.html-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-align: center;
 }
 
-
-
-p {
-  color: red;
-}
 
 
 /* Selectors uzduotis */
@@ -26,30 +58,4 @@ ul li:first-child li:nth-child(2) {
 }
 ul li:nth-of-type(2n) {
   font-weight: bold;
-}
-
-
-
-/* CSS sablono uzduotis */
-
-header {
-  font-size: 30px;
-  height: 150PX;
-  background-color: coral;
-  margin-bottom: 10px;
-}
-
-aside {
-  background-color: cornflowerblue;
-  padding: 10px;
-}
-
-main {
-  background-color: darkgoldenrod;
-}
-
-footer {
-  font-size: 30px;
-  height: 100px;
-  background-color:green;
 }
