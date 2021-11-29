@@ -130,13 +130,13 @@ footer .social-links {
 
 @media screen and (max-width: 650px) {
   body {
-    background-image: url(./images/6984367.png)
+    background-image: url(./images/6984367.png);
   }
   .grid {
     grid-template-columns: auto;
     grid-template-rows: 1fr auto;
   }
-  nav { 
+  nav {
     position: static;
     display: grid;
     justify-content: center;
@@ -178,10 +178,10 @@ footer .social-links {
 
 @media screen and (min-width: 650px) and (max-width: 800px) {
   body {
-    background-image: url(./images/luke-chesser-3rWagdKBF7U-unsplash.jpg)
+    background-image: url(./images/luke-chesser-3rWagdKBF7U-unsplash.jpg);
   }
-  nav { 
-    position: static;  
+  nav {
+    position: static;
   }
   .right {
     grid-template-areas:
