@@ -1,0 +1,115 @@
+body {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'nav nav nav'
+    'menu main features'
+    'menu footer external-links';
+  grid-template-columns: 0.75fr 3.25fr 1fr;
+  grid-template-rows: 150px 50px auto 100px;
+  gap: 5px;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(174, 174, 236);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding-inline: 3rem;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.header-right {
+  justify-self: right;
+  height: 70%;
+  display: grid;
+  align-content: space-between;
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+  letter-spacing: 5px;
+}
+
+.search-bar {
+  justify-self: right;
+}
+
+nav {
+  grid-area: nav;
+  background-color: coral;
+  display: grid;
+  place-content: center;
+}
+.nav-links {
+  display: flex;
+  gap: 4rem;
+  letter-spacing: 5px;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: cornsilk;
+  display: grid;
+  justify-items: center;
+  align-content: space-around;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  letter-spacing: 3px;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  place-content: center;
+  background-color: cyan;
+}
+.features {
+  grid-area: features;
+  background-color: darkcyan;
+  display: grid;
+  place-content: center;
+}
+.features ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.external-links {
+  grid-area: external-links;
+  background-color: darkkhaki;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 3px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(194, 157, 224);
+}
