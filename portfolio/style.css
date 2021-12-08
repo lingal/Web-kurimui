@@ -3,7 +3,7 @@ body {
   font-size: 18px;
   color: #fff;
   font-family: monospace;
-  background-image: url(/portfolio/images/css\ background\ gradient\ with\ opaque\ pattern\ on\ top\ Stack\ Overflow.png);
+  background-image: url(images/bg-large.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -130,7 +130,7 @@ footer .social-links {
 
 @media screen and (max-width: 650px) {
   body {
-    background-image: url(./images/6984367.png);
+    background-image: url(images/6984367.png);
   }
   .grid {
     grid-template-columns: auto;
@@ -178,7 +178,7 @@ footer .social-links {
 
 @media screen and (min-width: 650px) and (max-width: 800px) {
   body {
-    background-image: url(./images/luke-chesser-3rWagdKBF7U-unsplash.jpg);
+    background-image: url(images/6984367.png);
   }
   nav {
     position: static;
