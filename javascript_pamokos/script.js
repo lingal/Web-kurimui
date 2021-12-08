@@ -2,13 +2,32 @@
 // let tekstas = 'Kintamojo a reiksme: ';
 
 // console.log(tekstas + a);
+//=======================================================================
 
 
 
+//Kampu suma uzduotis
+//=======================================================================
+let atsEl = document.getElementById('ats');
+let n1 = 3;
+let n2 = 4;
+
+// console.log(atsEl);
+
+function rastiKampuSuma(n1, n2) {
+  let s1 = (n1 - 2) * 180;
+  let s2 = (n2 - 2) * 180;
+  atsEl.innerHTML = 'S1: ' + s1 + '<br>';
+  atsEl.innerHTML += 'S2: ' + s2 + '<br>';
+  atsEl.innerHTML += 'Bendra kampu suma: ' + (s1 + s2);
+}
+
+rastiKampuSuma(n1, n2);
+//=======================================================================
 
 
 // === JavaScript 1 dalis ===
-
+//=======================================================================
 // 1.
 
 // let metai = 1986 % 10;
@@ -32,51 +51,66 @@
 
 
 // let gimimoData = [1986, 08, 14];
-// let suma3 = gimimoData.map((x) => x%10).reduce((suma, n) => suma + n)
+// let suma3 = gimimoData.map((x) => x%10).reduce((suma, n) => suma + n,0)
 
 // console.log(suma3);
+//=======================================================================
+
 
 // 2.
-
+//=======================================================================
 // let r = Number(prompt('Apskritimo spindulys (r): '));
-// let r = Number(document.querySelector('.spindulys').value);
+
 // let c = 2 * Math.PI * r;
-// let s = Math.PI * r ** 2
+// let s = Math.PI * r ** 2;
 
-// const ilgisPlotas = function (r) {
-//   let ilgis = 2 * Math.PI * r;
-//   let plotas = Math.PI * r ** 2;
-//   return `Apskritimo ilgis: ${ilgis} Plotas: ${plotas}`;
-//   // alert(`Apskritimo ilgis: ${ilgis} ir plotas: ${plotas}`);
-// };
+let ilgisPlotas = function () {
+  let r = document.getElementById('spindulys').value;
+  let ilgis = 2 * Math.PI * r;
+  let plotas = Math.PI * r ** 2;
+  return `Apskritimo ilgis: ${ilgis} <br> Plotas: ${plotas}`;
+  // alert(`Apskritimo ilgis: ${ilgis} ir plotas: ${plotas}`);
+};
 
-// ilgisPlotas(r);
+let btn = document.querySelector('.apskritimas-btn');
+let atsakymas = document.querySelector('.ats');
 
-// const btn = document.querySelector('.apskritimas-btn');
-// const atsakymas = document.querySelector('.ats');
-
-// btn.addEventListener('click', function () {
-//   atsakymas.innerHTML = ilgisPlotas(r);
-// })
-
+btn.addEventListener('click', function () {
+  atsakymas.innerHTML = ilgisPlotas();
+})
+//=======================================================================
 
 
 // === JavaScript 2 dalis ===
-
+//=======================================================================
 
 // 0.
 
-// let intervalai = [[-5,0], [-4,4]];
-// let x;
-// let y;
-// let ats = [];
 
-// if(intervalai[0][0] < intervalai[1][0] && intervalai[0][1] < intervalai[1][1]) {
-//   x = Math.max(intervalai[0][0], intervalai[0][1]);
-//   y = Math.min(intervalai[1][0], intervalai[1][1]);
-//   ats.push(x,y);
-// } 
-// console.log(ats);
+let a = -5;
+let b = 0;
+let c = -4;
+let d = 4;
+let x;
+let y;
+
+if (a > b || c > d) {
+  document.getElementById('intervalu-ats').innerHTML = 'Sankirta neegzistuoja';
+}
+
+if (a >= c && a <= d) {
+  x = a;
+} else if (a <= c && c <= b) {
+  x = c;
+}
+
+if (a <= d && d <= b) {
+  y = d;
+} else if (c <= b && b <= d) {
+  y = b;
+}
+
+document.getElementById('intervalu-ats').innerHTML = `x: ${x}, y: ${y}`;
 
 
 // 1.
@@ -100,20 +134,20 @@
 
 // 4.
 
-// let studentas = {
-//   vardas: 'Tomas',
-//   pavarde: 'Tomauskas',
-//   kursas: 4,
-//   kurMokosi: 'KTU',
-//   pazymiai: [7, 4, 5, 10, 9, 10, 3, 6],
-//   pazymiuVidurkis: function (pazymiai) {
-//     let vidurkis = 0;
-//     for (let i = 0; i < pazymiai.length; i++) {
-//       vidurkis += pazymiai[i];
-//     }
-//     return vidurkis / pazymiai.length;
-//   },
-// };
+let studentas = {
+  vardas: 'Tomas',
+  pavarde: 'Tomauskas',
+  kursas: 4,
+  kurMokosi: 'KTU',
+  pazymiai: [7, 4, 5, 10, 9, 10, 3, 6],
+  pazymiuVidurkis: function (pazymiai) {
+    let vidurkis = 0;
+    for (let i = 0; i < pazymiai.length; i++) {
+      vidurkis += pazymiai[i];
+    }
+    return vidurkis / pazymiai.length;
+  },
+};
 
 
 // 5.
@@ -168,60 +202,134 @@
 
 // console.log(sandauga);
 
+//12.
+
+// console.log(studentas.kursas !== isNaN);
+// console.log(typeof studentas.kursas === 'number');
+
+
+// 13. 
+
+// console.log(studentas.kursas === 4 && Number.isInteger(studentas.kursas));
+
+
+// 14.
 
 
 
+// 15.
 
+let A = [1, 3, 6, 5, 7, 2, 2, 4, 4, 8];
+let rodytiAts = document.getElementById('odd-even-ats');
 
-
-
-//Funkciju Uzduotis is skaidriu
-
-// 1 uzduotis
-// function sudetis(a, b) {
-//   return a + b;
-// }
-
-// function atimtis(a, b) {
-//   return a - b;
-// }
-
-// function dalyba(a, b) {
-//   return a / b;
-// }
-
-// function daugyba(a, b) {
-//   return a * b;
-// }
-
-// 2 - 3 uzduotis
-
-// let rezulatas = document.getElementById('rezultatai');
-
-
-
-// console.log(rezulatas);
-
-// rezulatas.style.opacity = 0;
-
-
-// imgBtn.addEventListener('click', function () {
-//   rezulatas.style.opacity = 1;
-//   rezultatas(1, 1);
-// })
-
-
-
-let sheets = document.querySelectorAll('.sheet');
-let btns = document.querySelectorAll('.btn');
-
-
-function tabs() { 
-  for(let i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function() {
-      console.log(btns[i]);
-    })
+function sudeti(A, B) {
+  let odd = 0;
+  let even = 0;
+  for (let i = 0; i < A.length; i++) {
+    if (A[i] % 2 === 0) {
+      even += A[i];
+    }
+    if (A[i] % 2 !== 0) {
+      odd += A[i];
+    }
+  }
+  if (B === 'odd') {
+    rodytiAts.innerHTML = odd;
+  }
+  if (B === 'even') {
+    rodytiAts.innerHTML = even;
+  }
+  if (B === 'abu') {
+    rodytiAts.innerHTML = even + odd;
   }
 }
 
-tabs(sheets);
+// 15.1
+
+function sudetiIndex(A) {
+  let odd = 0;
+  let even = 0;
+  for (let i = 0; i < A.length; i++) {
+    if (A[i] % 2 === 0) {
+      even += A.indexOf(A[i]);
+    }
+    if (A[i] % 2 !== 0) {
+      odd += A.indexOf(A[i]);
+    }
+  }
+  console.log(even);
+  console.log(odd);
+}
+
+sudetiIndex(A);
+
+
+// 15.2
+
+function skaiciuGen(ilgis) {
+  let skaiciai = [];
+  for (let i = 0; i < ilgis; i++) {
+    skaiciai.push(Math.floor(Math.random() * 100));
+  }
+  console.log(skaiciai);
+  return skaiciai;
+}
+skaiciuGen(7);
+
+
+// 15.3
+
+function raidziuGen(n) {
+  let raides = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  let atsitiktines =[];
+  let ilgisMasyvo = skaiciuGen(n);
+  for (let i = 0; i < ilgisMasyvo.length; i++) {
+    atsitiktines.push(raides[Math.floor(Math.random()*raides.length)]);
+  }
+  console.log(atsitiktines);
+}
+raidziuGen(10);
+
+
+//=======================================================================
+//Funkciju Uzduotis (is skaidriu)
+
+// 1 uzduotis
+function sudetis(a, b) {
+  return a + b;
+}
+
+function atimtis(a, b) {
+  return a - b;
+}
+
+function dalyba(a, b) {
+  return a / b;
+}
+
+function daugyba(a, b) {
+  return a * b;
+}
+
+// 2 - 3 uzduotis
+
+function fn() {
+  let rezultatai = document.getElementById('rezultatai');
+  // console.log(rezultatai);
+
+  for (let a = 1; a <= 5; a++) {
+    for (let b = 1; b <= 20; b += 2) {
+      rezultatai.innerHTML += `<mark>Ciklas ${a} - ${b}:</mark> <br>`;
+      rezultatai.innerHTML += `Sudetis: ${sudetis(a, b)} <br>`;
+      rezultatai.innerHTML += `Atimtis: ${atimtis(a, b)} <br>`;
+      rezultatai.innerHTML += `Dalyba: ${dalyba(a, b)} <br>`;
+      rezultatai.innerHTML += `Daugyba: ${daugyba(a, b)} <br><br>`;
+    }
+  }
+}
+//=======================================================================
+
+
+
+//Tab uzduotis
+

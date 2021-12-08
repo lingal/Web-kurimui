@@ -14,7 +14,7 @@
     <style>
       body {
         height: 100vh;
-        background-image: url(./images/contact_us.jpg);
+        background-image: url(images/contact_us.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -39,16 +39,17 @@
         background-color: rgba(253, 253, 253, 0.3333);
         width: 25rem;
         padding: 2rem;
-       display: grid;
-       place-items: center;
+        display: grid;
+        place-items: center;
       }
-      label {   
+      label {
         display: block;
         margin-bottom: 1rem;
         justify-self: left;
       }
 
-      input, textarea {
+      input,
+      textarea {
         width: 100%;
         margin-bottom: 1.5rem;
         border-radius: 10px;
@@ -60,27 +61,22 @@
         padding: 0.2rem 4rem;
         margin: 0 auto;
       }
-
     </style>
   </head>
   <body>
-
     <button class="btn"><a href="index.html">I pagrindini</a></button>
 
     <div class="grid">
       <div class="container">
         <form action="#" method="get">
           <label for="firstName"> Jusu vardas</label>
-          <input type="text"  id="firstName" />
+          <input type="text" id="firstName" />
           <br />
           <label for="email">Jusu el pastas</label>
           <input type="email" id="email" />
           <br />
-          <label for="tema">
-            Zinutes tema
-            
-          </label>
-          <input type="text" id="tema"/>
+          <label for="tema"> Zinutes tema </label>
+          <input type="text" id="tema" />
           <br />
           <textarea name="msg" placeholder="zinute..." rows="5"></textarea
           ><br />

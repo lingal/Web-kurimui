@@ -13,7 +13,8 @@
       <h1>Javascript</h1>
     </header>
     <main>
-      <!-- <section class="exercise2">
+
+      <section class="exercise2">
         <p>
           <b><span>2.</span></b
           >Sukurti algoritmus kurie skaičiuotų apskritimo ilgį ir plotą.
@@ -22,20 +23,35 @@
         <div class="apskritimas">
           <label>
             <p>Apskritimo spindulys:</p>
-            <input type="text" class="spindulys" />
+            <input type="number" id="spindulys" />
             <p class="ats"></p>
           </label>
           <button type="submit" class="apskritimas-btn">Skaiciuoti</button>
         </div>
       </section>
-      <section>
-        <img src="pexels-pixabay-356079.jpg" class="img-btn" alt="klaustukas" />
-        <div id="rezultatai">
-         
-        </div>
-      </section> -->
 
-      <section class="tabs">
+      <section class="kampu-suma" style="background-color: black; color: azure; width: max-content; padding: 1.5rem; margin-top: 1rem;">
+        <div id="ats"></div>
+      </section>
+    
+      <section class="intervalu-sankirta">
+        <div id="intervalu-ats"></div>
+      </section>
+
+      <section class="funckijos">
+        <img src="pexels-pixabay-356079.jpg" onclick="fn()" alt="question mark"">
+        <div id="rezultatai"></div>
+      </section>
+
+      <section class="odd-even">
+        <button id="odd-btn" onclick="sudeti(A,'odd')">Nelyginiu suma</button>
+        <button id="even-btn" onclick="sudeti(A,'even')">Lyginiu suma</button>
+        <button id="odd-even-btn" onclick="sudeti(A,'abu')">Bendra suma</button>
+        <div id="odd-even-ats"></div>
+      </section>
+
+
+      <!-- <section class="tabs">
         <div class="tab-btns">
           <a href="#" class="btn btnOne">Home</a>
           <a href="#" class="btn btnTwo">About</a>
@@ -50,7 +66,8 @@
           <div class="sheet">Contact</div>
           <div class="sheet">Settings</div>
         </div>
-      </section>
+      </section> -->
+
     </main>
     <script src="script.js"></script>
   </body>

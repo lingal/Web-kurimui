@@ -1,9 +1,13 @@
 body {
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: 100px auto;
-  
+  font-size: 20px;
 }
+
+img {
+  display: block;
+  max-width: 20%;
+}
+
 .tabs {
   width: 30%;
   height: 30%;
@@ -31,28 +35,19 @@ a {
 }
 
 
-
-
-/* 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-header {
-  justify-self: center;
-}
-
-main {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: center;
-  gap: 1rem;
-}
-
 .exercise2 {
   height: 100%;
   background-color: rgb(216, 216, 216);
   padding: 1rem;
-} */
+}
+
+.intervalu-sankirta {
+  margin-top: 1rem;
+  display: inline-block;
+  background-color: cadetblue;
+  font-size: 24px;
+  padding: 1.5rem;
+}
+.funckijos {
+  margin-top: 1rem;
+}

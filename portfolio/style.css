@@ -116,6 +116,25 @@ main {
   margin-bottom: 3rem;
 }
 
+.list-section li {
+  color: blue;
+}
+
+/* .web-kurimas-list > li:nth-child(2) {
+  width: 100px;
+  height: 100px;
+} */
+
+.web-kurimas-list > li:nth-child(3) li:nth-child(3),
+.web-kurimas-list > li:nth-child(1) li:nth-child(2) {
+  color: crimson;
+}
+
+.web-kurimas-list li:nth-child(even){
+  font-weight: bold;
+  color: #fff;
+}
+
 footer {
   grid-area: footer;
   text-align: center;
