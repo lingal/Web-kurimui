@@ -246,22 +246,23 @@ function sudeti(A, B) {
 
 // 15.1
 
-function sudetiIndex(A) {
-  let odd = 0;
-  let even = 0;
+function sudetiIndex(A, type) {
+
+  let typeEl = {
+    even: 0,
+    odd: 0,
+  };
   for (let i = 0; i < A.length; i++) {
     if (A[i] % 2 === 0) {
-      even += A.indexOf(A[i]);
+      typeEl['even'] += A.indexOf(A[i]);
     }
     if (A[i] % 2 !== 0) {
-      odd += A.indexOf(A[i]);
+      typeEl['odd'] += A.indexOf(A[i]);
     }
   }
-  console.log(even);
-  console.log(odd);
+  return typeEl[type];
 }
 
-sudetiIndex(A);
 
 
 // 15.2
@@ -281,15 +282,25 @@ skaiciuGen(7);
 
 function raidziuGen(n) {
   let raides = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  let atsitiktines =[];
+  let atsitiktines = [];
   let ilgisMasyvo = skaiciuGen(n);
   for (let i = 0; i < ilgisMasyvo.length; i++) {
-    atsitiktines.push(raides[Math.floor(Math.random()*raides.length)]);
+    atsitiktines.push(raides[Math.floor(Math.random() * raides.length)]);
   }
   console.log(atsitiktines);
 }
 raidziuGen(10);
 
+
+//15.4
+
+function showAnswer(oddEven) {
+  let textInputEl = document.getElementById('textInput');
+  textInputEl.setAttribute('placeholder', sudetiIndex(A, oddEven));
+  console.log(textInputEl);
+}
+
+showAnswer('odd');
 
 //=======================================================================
 //Funkciju Uzduotis (is skaidriu)
@@ -333,3 +344,13 @@ function fn() {
 
 //Tab uzduotis
 
+let sheets = document.querySelectorAll('.sheet');
+
+// console.log(sheets);
+
+// function tabas(id) {
+//   for (let i = 0; i < sheets.length; i++) {
+//     sheets[i].style.display = 'none';
+//   }
+//   document.getElementById(id).style.display = 'block';
+// }

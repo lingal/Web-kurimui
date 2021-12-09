@@ -48,27 +48,34 @@
         <button id="even-btn" onclick="sudeti(A,'even')">Lyginiu suma</button>
         <button id="odd-even-btn" onclick="sudeti(A,'abu')">Bendra suma</button>
         <div id="odd-even-ats"></div>
+        <input type="text" name="tekstas" id="textInput" ">
       </section>
 
 
-      <!-- <section class="tabs">
-        <div class="tab-btns">
-          <a href="#" class="btn btnOne">Home</a>
-          <a href="#" class="btn btnTwo">About</a>
-          <a href="#" class="btn btnThree">Services</a>
-          <a href="#" class="btn btnFour">Contact</a>
-          <a href="#" class="btn btnFive">Settings</a>
+      <section class="tab">
+        <div class="tabs">
+          <a href="#home" class="btn btnOne" onclick="tabas('home')">Home</a>
+          <a href="#about" class="btn btnTwo" onclick="tabas('about')">About</a>
+          <a href="#services" class="btn btnThree" onclick="tabas('services')" >Services</a>
+          <a href="#contact" class="btn btnFour" onclick="tabas('contact')">Contact</a>
+          <a href="#settings" class="btn btnFive" onclick="tabas('settings')">Settings</a>
+          <!-- <a href="#home" class="btn btnOne" >Home</a>
+          <a href="#about" class="btn btnTwo">About</a>
+          <a href="#services" class="btn btnThree" >Services</a>
+          <a href="#contact" class="btn btnFour" >Contact</a>
+          <a href="#settings" class="btn btnFive" >Settings</a> -->
         </div>
         <div class="sheets">
-          <div class="sheet">Home</div>
-          <div class="sheet">About</div>
-          <div class="sheet">Services</div>
-          <div class="sheet">Contact</div>
-          <div class="sheet">Settings</div>
+          <div id="home"class="sheet">Home</div>
+          <div id="about" class="sheet">About</div>
+          <div id="services"class="sheet">Services</div>
+          <div id="contact" class="sheet">Contact</div>
+          <div id="settings" class="sheet">Settings</div>
         </div>
-      </section> -->
+      </section>
 
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

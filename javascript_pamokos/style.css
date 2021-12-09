@@ -3,14 +3,13 @@ body {
   font-size: 20px;
 }
 
+header {
+  text-align: center;
+}
+
 img {
   display: block;
   max-width: 20%;
-}
-
-.tabs {
-  width: 30%;
-  height: 30%;
 }
 
 a {
@@ -18,22 +17,6 @@ a {
   padding: 0.5rem 1rem;
   background-color: rgb(114, 243, 174);
 }
-
-.sheets {
-  height: 100%;
-  width: 100%;
-  background-color: grey;
-}
-
-.sheets > * {
-  display: none;
-  color: azure;
-}
-
-#home {
-  display: block;
-}
-
 
 .exercise2 {
   height: 100%;
@@ -50,4 +33,56 @@ a {
 }
 .funckijos {
   margin-top: 1rem;
+}
+
+/* Tab uzduotis  */
+
+#home {
+  display: block;
+}
+
+.tab {
+  width: 600px;
+  height: 150px;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.tabs > * {
+  border-radius: 0 60% 0 0;
+  width: 5rem;
+}
+
+.sheets {
+  height: 100%;
+  width: 100%;
+  background-color: grey;
+}
+
+.sheets > * {
+  display: none;
+  color: azure;
+}
+
+.sheets .sheet:nth-child(2) {
+  height: 100%;
+  width: 100%;
+  background-color: crimson;
+}
+.sheets .sheet:nth-child(3) {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(212, 255, 171);
+  color: black;
+}
+.sheets .sheet:nth-child(4) {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(53, 0, 151);
+}
+.sheets .sheet:nth-child(5) {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(246, 244, 92);
+  color: black;
 }
