@@ -29,6 +29,7 @@
 
 
   <?php
+
   echo '<p><b>a)</b></p>';
 
   $ceu = [
@@ -71,42 +72,9 @@
   notSorted($ceu);
 
 
-  ?>
-
-
-
-
-  <?php
 
   echo "<p><b>b)</b></p>";
 
-  $ceu = [
-    "Italy" => "Rome",
-    "Luxembourg" => "Luxembourg",
-    "Belgium" => "Brussels",
-    "Denmark" => "Copenhagen",
-    "Finland" => "Helsinki",
-    "France" => "Paris",
-    "Slovakia" => "Bratislava",
-    "Slovenia" => "Ljubljana",
-    "Germany" => "Berlin",
-    "Greece" => "Athens",
-    "Ireland" => "Dublin",
-    "Netherlands" => "Amsterdam",
-    "Portugal" => "Lisbon",
-    "Spain" => "Madrid",
-    "Sweden" => "Stockholm",
-    "United Kingdom" => "London",
-    "Cyprus" => "Nicosia",
-    "Lithuania" => "Vilnius",
-    "Czech Republic" => "Prague",
-    "Estonia" => "Tallin",
-    "Hungary" => "Budapest",
-    "Latvia" => "Riga",
-    "Malta" => "Valetta",
-    "Austria" => "Vienna",
-    "Poland" => "Warsaw",
-  ];
 
 
   function sorted (array $arr) {
@@ -119,41 +87,9 @@
   sorted($ceu);
 
 
-  ?>
 
+  echo "<p><b>c)</b></p>";
 
-  <p><b>c)</b></p>
-
-
-  <?php
-
-  $ceu = [
-    "Italy" => "Rome",
-    "Luxembourg" => "Luxembourg",
-    "Belgium" => "Brussels",
-    "Denmark" => "Copenhagen",
-    "Finland" => "Helsinki",
-    "France" => "Paris",
-    "Slovakia" => "Bratislava",
-    "Slovenia" => "Ljubljana",
-    "Germany" => "Berlin",
-    "Greece" => "Athens",
-    "Ireland" => "Dublin",
-    "Netherlands" => "Amsterdam",
-    "Portugal" => "Lisbon",
-    "Spain" => "Madrid",
-    "Sweden" => "Stockholm",
-    "United Kingdom" => "London",
-    "Cyprus" => "Nicosia",
-    "Lithuania" => "Vilnius",
-    "Czech Republic" => "Prague",
-    "Estonia" => "Tallin",
-    "Hungary" => "Budapest",
-    "Latvia" => "Riga",
-    "Malta" => "Valetta",
-    "Austria" => "Vienna",
-    "Poland" => "Warsaw",
-  ];
 
 
 
@@ -165,44 +101,11 @@
     }
   }
 
-  printX($ceu, 3)
+  printX($ceu, 3);
 
 
-  ?>
 
-
-  <p><b>d)</b></p>
-
-  <?php
-
-  $ceu = [
-    "Italy" => "Rome",
-    "Luxembourg" => "Luxembourg",
-    "Belgium" => "Brussels",
-    "Denmark" => "Copenhagen",
-    "Finland" => "Helsinki",
-    "France" => "Paris",
-    "Slovakia" => "Bratislava",
-    "Slovenia" => "Ljubljana",
-    "Germany" => "Berlin",
-    "Greece" => "Athens",
-    "Ireland" => "Dublin",
-    "Netherlands" => "Amsterdam",
-    "Portugal" => "Lisbon",
-    "Spain" => "Madrid",
-    "Sweden" => "Stockholm",
-    "United Kingdom" => "London",
-    "Cyprus" => "Nicosia",
-    "Lithuania" => "Vilnius",
-    "Czech Republic" => "Prague",
-    "Estonia" => "Tallin",
-    "Hungary" => "Budapest",
-    "Latvia" => "Riga",
-    "Malta" => "Valetta",
-    "Austria" => "Vienna",
-    "Poland" => "Warsaw",
-  ];
-
+echo "<p><b>d)</b></p>";
 
 
 
@@ -215,13 +118,8 @@
   }
   charA($ceu, 'A');
 
-  ?>
 
-
-
-  <p><b>e)</b></p>
-
-  <?php
+echo "<p><b>e)</b></p>";
 
 
   function splitArr(array $arr) {
@@ -236,63 +134,77 @@
           }
         $count++;
       }
-    echo '</div>';
+      echo '</div>';
 
     echo '<div style="color:green;">';
       foreach ($arrHalf as $key => $value) {
           echo $key . ' => ' . $value . '<br>';
       }
-    echo '</div>';
+      echo '</div>';
     echo '</div>';
   }
 
   splitArr($ceu);
 
 
-  ?>
+
+ echo '<h3>2]</h3>';
 
 
-
-  <div>
-    <h3>2]</h3>
-  </div>
-
-  <?php
   $temp = [
     78, 60, 62, 68, 71, 68, 73, 85, 66, 64, 76, 63, 75, 76,
     73, 68, 62, 73, 72, 65, 74, 62, 62, 65, 64, 68, 73, 75, 79, 73
   ];
 
-  $avg = array_sum($temp) / count($temp);
-  echo 'Temperaturos vidurkis: ' . '<span style="color:red; font-size: 24px;" >' . $avg . '</span>' . '<br>';
 
 
-  sort($temp);
-  $lowestFive = '';
-
-  for ($x = 0; $x < 10; $x++) {
-    if ($temp[$x] !== $temp[$x + 1]) {
-      $lowestFive .= $temp[$x] . ',';
-    }
+  function avgTemp(array $arr) {
+    $avg = array_sum($arr) / count($arr);
+    echo 'Temperaturos vidurkis: ' . '<span style="color:red; font-size: 24px;" >' . $avg . '</span>' . '<br>';
   }
 
-  echo 'Penkios žemiausios temperatūros : ' . $lowestFive . '<br>';
+  avgTemp($temp);
 
 
-  // $newTemp = array_slice($temp, -5);
+  function lowestFive(array $arr) {
+    sort($arr);
+    $lowestFive = '';
+    for ($x = 0; $x < 5; $x++) {
+        $lowestFive .= $arr[$x] . ',';
+  }
+    echo 'Penkios žemiausios temperatūros : ' . $lowestFive . '<br>';
 
-  // $highestFive = '';
-  // for($x = 0; $x < 5; $x++) {
-  //   $highestFive .= $newTemp[$x] . ',';
-  // }
+  }
+  lowestFive($temp);
 
-  // echo 'Penkios auksciausios temperatūros : ' . $highestFive . '<br>';
 
-  ?>
+    function highestFive(array $arr) {
+      sort($arr);
+      $reversedArr = array_reverse($arr);
+      $highestTemp = '';
+      for($x = 0; $x <5; $x++) {
+          $highestTemp = $reversedArr[$x] . ', ' .$highestTemp;
+      }
+      echo $highestTemp;
+    }
+  highestFive($temp);
 
-  <h3>3]</h3>
 
-  <?php
+
+
+//   $newTemp = array_slice($temp, -5);
+
+//   $highestFive = '';
+//   for($x = 0; $x < 5; $x++) {
+//     $highestFive .= $newTemp[$x] . ',';
+//   }
+//
+//   echo 'Penkios auksciausios temperatūros : ' . $highestFive . '<br>';
+
+
+
+ echo '<h3>3]</h3>';
+
 
   $arr = ["abcd", "abc", "de", "hjjj", "g", "wer"];
 
@@ -318,12 +230,12 @@
   echo 'Trumpiausi masyvo elementai: ' . $trumpiausiEl;
   echo 'Ilgiausi masyvo elementai: ' . $ilgiausiEl;
 
-  ?>
 
 
-  <h3>4]</h3>
 
-  <?php
+ echo '<h3>4]</h3>';
+
+
 
   $vardai = ["Jonas", "Petras", "Kazys", "Zigmas", "Ona", "Janina", "Kristina"];
 
@@ -340,15 +252,10 @@
 
   print_r($D);
 
-  ?>
 
-  <br>
-  <br>
-  <hr>
-
-
-  <?php
-
+  echo '<br>';
+  echo '<br>';
+  echo '<hr>';
 
 
 
