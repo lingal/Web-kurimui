@@ -185,23 +185,72 @@ echo "<p><b>e)</b></p>";
       for($x = 0; $x <5; $x++) {
           $highestTemp = $reversedArr[$x] . ', ' .$highestTemp;
       }
-      echo $highestTemp;
+      echo 'Penkios auksciausios temperatūros :' .  $highestTemp;
     }
   highestFive($temp);
 
 
+  //   $newTemp = array_slice($temp, -5);
+
+  //   $highestFive = '';
+  //   for($x = 0; $x < 5; $x++) {
+  //     $highestFive .=  $newTemp[$x] . ',';
+  //   }
+  //
+  //   echo 'Penkios auksciausios temperatūros : ' . $highestFive . '<br>';
 
 
-//   $newTemp = array_slice($temp, -5);
+    echo '<h4>'. 2.1 . '</h4>';
 
-//   $highestFive = '';
-//   for($x = 0; $x < 5; $x++) {
-//     $highestFive .= $newTemp[$x] . ',';
-//   }
-//
-//   echo 'Penkios auksciausios temperatūros : ' . $highestFive . '<br>';
+    function graphics(array $temp) {
+        echo '<div style="display: flex; gap: 10px; align-items: flex-end">';
+        foreach($temp as $key) {
+        echo '<span'. ' ' . 'style="' . 'height:' . $key . 'px' . ';' . 'background-color:' . 'green' . '" >' . $key . "</span>";
+     }
+        echo '</div>';
+    }
+  graphics($temp);
 
 
+  echo '<h4>'. 2.2 . '</h4>';
+
+
+  function removeDuplicatesLowest(array $arr) {
+
+    $newArr = array_unique($arr);
+    sort($newArr);
+    $counter = 0;
+    foreach($newArr as $_ => $value) {
+        if($counter < 5) {
+            echo $value . ', ';
+        }
+        $counter++;
+    }
+  }
+
+  removeDuplicatesLowest($temp);
+
+  echo '<br>';
+  echo '<br>';
+  echo '<hr>';
+
+  function removeDuplicatesHighest(array $arr) {
+
+    $newArr = array_unique($arr);
+    sort($newArr);
+    $reversedArr = array_reverse($newArr);
+    $counter = 0;
+    $topHighest = '';
+    foreach($reversedArr as $_ => $value) {
+      if($counter < 5) {
+        $topHighest = $value . ', ' . $topHighest;
+      }
+      $counter++;
+    }
+    echo $topHighest;
+  }
+
+  removeDuplicatesHighest($temp);
 
  echo '<h3>3]</h3>';
 
