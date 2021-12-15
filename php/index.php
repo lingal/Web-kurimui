@@ -26,9 +26,10 @@
 
 
   <h3>1]</h3>
-  <p><b>a)</b></p>
+
 
   <?php
+  echo '<p><b>a)</b></p>';
 
   $ceu = [
     "Italy" => "Rome",
