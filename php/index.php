@@ -8,12 +8,12 @@
   <title>Document</title>
 
 
-    <style>
-        .flex {
-            display: flex;
-            gap: 20px;
-        }
-    </style>
+  <style>
+    .flex {
+      display: flex;
+      gap: 20px;
+    }
+  </style>
 
 
 </head>
@@ -63,7 +63,8 @@
 
 
 
-  function notSorted(array $arr) {
+  function notSorted(array $arr)
+  {
     foreach ($arr as $key => $value) {
       echo $key . ' ' . $value . '<br>';
     }
@@ -77,7 +78,8 @@
 
 
 
-  function sorted (array $arr) {
+  function sorted(array $arr)
+  {
     ksort($arr);
     foreach ($arr as $key => $value) {
       echo $key . ' ' . 'sostine yra' . ' ' . $value . '<br>';
@@ -93,7 +95,8 @@
 
 
 
-  function printX (array $arr, int $x) {
+  function printX(array $arr, int $x)
+  {
     $countries = array_keys($arr);
     $capitals = array_values($arr);
     for ($i = 0; $i < sizeof($arr); $i += $x) {
@@ -105,42 +108,44 @@
 
 
 
-echo "<p><b>d)</b></p>";
+  echo "<p><b>d)</b></p>";
 
 
 
-  function charA(array $arr, string $char) {
-    foreach ($arr as $salis => $sostine){
-        if(str_starts_with($salis, $char) || str_starts_with($sostine, $char)) {
-            echo $salis . ' => ' . $sostine . '<br>';
-        }
+  function charA(array $arr, string $char)
+  {
+    foreach ($arr as $salis => $sostine) {
+      if (str_starts_with($salis, $char) || str_starts_with($sostine, $char)) {
+        echo $salis . ' => ' . $sostine . '<br>';
+      }
     }
   }
   charA($ceu, 'A');
 
 
-echo "<p><b>e)</b></p>";
+  echo "<p><b>e)</b></p>";
 
 
-  function splitArr(array $arr) {
-      $arrLength = round(sizeof($arr) /2, 0,PHP_ROUND_HALF_DOWN);
-      $arrHalf = array_splice($arr, $arrLength);
-      $count = 0;
+  function splitArr(array $arr)
+  {
+    $arrLength = round(sizeof($arr) / 2, 0, PHP_ROUND_HALF_DOWN);
+    $arrHalf = array_splice($arr, $arrLength);
+    $count = 0;
     echo '<div class="flex">';
-      echo '<div style="color:red;">';
-      foreach($arr as $key => $value) {
-          if($count < $arrLength) {
-            echo $key . ' => ' . $value . '<br>';
-          }
-        $count++;
+    echo '<div style="color:red;">';
+    foreach ($arr as $key => $value) {
+      if ($count < $arrLength) {
+        echo $key . ' => ' . $value . '<br>';
       }
-      echo '</div>';
+      $count++;
+    }
+    echo '</div>';
 
     echo '<div style="color:green;">';
-      foreach ($arrHalf as $key => $value) {
-          echo $key . ' => ' . $value . '<br>';
-      }
-      echo '</div>';
+    foreach ($arrHalf as $key => $value) {
+      echo $key . ' => ' . $value . '<br>';
+    }
+    echo '</div>';
     echo '</div>';
   }
 
@@ -148,7 +153,7 @@ echo "<p><b>e)</b></p>";
 
 
 
- echo '<h3>2]</h3>';
+  echo '<h3>2]</h3>';
 
 
   $temp = [
@@ -158,7 +163,8 @@ echo "<p><b>e)</b></p>";
 
 
 
-  function avgTemp(array $arr) {
+  function avgTemp(array $arr)
+  {
     $avg = array_sum($arr) / count($arr);
     echo 'Temperaturos vidurkis: ' . '<span style="color:red; font-size: 24px;" >' . $avg . '</span>' . '<br>';
   }
@@ -166,27 +172,28 @@ echo "<p><b>e)</b></p>";
   avgTemp($temp);
 
 
-  function lowestFive(array $arr) {
+  function lowestFive(array $arr)
+  {
     sort($arr);
     $lowestFive = '';
     for ($x = 0; $x < 5; $x++) {
-        $lowestFive .= $arr[$x] . ',';
-  }
+      $lowestFive .= $arr[$x] . ',';
+    }
     echo 'Penkios žemiausios temperatūros : ' . $lowestFive . '<br>';
-
   }
   lowestFive($temp);
 
 
-    function highestFive(array $arr) {
-      sort($arr);
-      $reversedArr = array_reverse($arr);
-      $highestTemp = '';
-      for($x = 0; $x <5; $x++) {
-          $highestTemp = $reversedArr[$x] . ', ' .$highestTemp;
-      }
-      echo 'Penkios auksciausios temperatūros :' .  $highestTemp;
+  function highestFive(array $arr)
+  {
+    sort($arr);
+    $reversedArr = array_reverse($arr);
+    $highestTemp = '';
+    for ($x = 0; $x < 5; $x++) {
+      $highestTemp = $reversedArr[$x] . ', ' . $highestTemp;
     }
+    echo 'Penkios auksciausios temperatūros :' .  $highestTemp;
+  }
   highestFive($temp);
 
 
@@ -200,31 +207,33 @@ echo "<p><b>e)</b></p>";
   //   echo 'Penkios auksciausios temperatūros : ' . $highestFive . '<br>';
 
 
-    echo '<h4>'. 2.1 . '</h4>';
+  echo '<h4>' . 2.1 . '</h4>';
 
-    function graphics(array $temp) {
-        echo '<div style="display: flex; gap: 10px; align-items: flex-end">';
-        foreach($temp as $key) {
-        echo '<span'. ' ' . 'style="' . 'height:' . $key . 'px' . ';' . 'background-color:' . 'green' . '" >' . $key . "</span>";
-     }
-        echo '</div>';
+  function graphics(array $temp)
+  {
+    echo '<div style="display: flex; gap: 10px; align-items: flex-end">';
+    foreach ($temp as $key) {
+      echo '<span' . ' ' . 'style="' . 'height:' . $key . 'px' . ';' . 'background-color:' . 'green' . '" >' . $key . "</span>";
     }
+    echo '</div>';
+  }
   graphics($temp);
 
 
-  echo '<h4>'. 2.2 . '</h4>';
+  echo '<h4>' . 2.2 . '</h4>';
 
 
-  function removeDuplicatesLowest(array $arr) {
+  function removeDuplicatesLowest(array $arr)
+  {
 
     $newArr = array_unique($arr);
     sort($newArr);
     $counter = 0;
-    foreach($newArr as $_ => $value) {
-        if($counter < 5) {
-            echo $value . ', ';
-        }
-        $counter++;
+    foreach ($newArr as $_ => $value) {
+      if ($counter < 5) {
+        echo $value . ', ';
+      }
+      $counter++;
     }
   }
 
@@ -234,15 +243,16 @@ echo "<p><b>e)</b></p>";
   echo '<br>';
   echo '<hr>';
 
-  function removeDuplicatesHighest(array $arr) {
+  function removeDuplicatesHighest(array $arr)
+  {
 
     $newArr = array_unique($arr);
     sort($newArr);
     $reversedArr = array_reverse($newArr);
     $counter = 0;
     $topHighest = '';
-    foreach($reversedArr as $_ => $value) {
-      if($counter < 5) {
+    foreach ($reversedArr as $_ => $value) {
+      if ($counter < 5) {
         $topHighest = $value . ', ' . $topHighest;
       }
       $counter++;
@@ -252,37 +262,39 @@ echo "<p><b>e)</b></p>";
 
   removeDuplicatesHighest($temp);
 
- echo '<h3>3]</h3>';
+  echo '<h3>3]</h3>';
 
 
-  $arr = ["abcd", "abc", "de", "hjjj", "g", "wer"];
+  $randomArr = ["abcd", "abc", "de", "hjjj", "g", "wer"];
 
-  $minLen = min(array_map('strlen', $arr));
-  $maxLen = max(array_map('strlen', $arr));
+  function trumpiausiasIlgiausias(array $arr)
+  {
+    $minLen =  min(array_map('strlen', $arr));
+    $maxLen =  max(array_map('strlen', $arr));
 
-  // echo $minLen;
-  // echo $maxLen;
+    $trumpiausiEl = '';
+    $ilgiausiEl = '';
 
-  $trumpiausiEl = '';
-  $ilgiausiEl = '';
-
-
-
-  for ($x = 0; $x < sizeof($arr); $x++) {
-    if (strlen($arr[$x]) === $minLen) {
-      $trumpiausiEl .= "'" . $arr[$x] . "'" . '<br>';
-    } elseif (strlen($arr[$x]) === $maxLen) {
-      $ilgiausiEl .= "'" . $arr[$x] . "'" . ', ';
+    for ($x = 0; $x < sizeof($arr); $x++) {
+      if (strlen($arr[$x]) === $minLen) {
+        $trumpiausiEl .= "'" . $arr[$x] . "'" . '<br>';
+      } elseif (strlen($arr[$x]) === $maxLen) {
+        $ilgiausiEl .= "'" . $arr[$x] . "'" . ', ';
+      }
     }
+
+    echo 'Trumpiausi masyvo elementai: ' . $trumpiausiEl;
+    echo 'Ilgiausi masyvo elementai: ' . $ilgiausiEl;
   }
 
-  echo 'Trumpiausi masyvo elementai: ' . $trumpiausiEl;
-  echo 'Ilgiausi masyvo elementai: ' . $ilgiausiEl;
+
+
+  trumpiausiasIlgiausias($randomArr);
 
 
 
 
- echo '<h3>4]</h3>';
+  echo '<h3>4]</h3>';
 
 
 
@@ -290,17 +302,20 @@ echo "<p><b>e)</b></p>";
 
   $pavardes = ["Joninis", "Petrinis", "Kazinis", "Zigminis", "Onienė",  "Jonė", "Kristė"];
 
-  $C = [1, 1, 2, 2, 1, 2, 2, 3, 1, 3, 2, 1, 1, 4, 2, 4, 1, 5, 2, 7, 1, 6, 2, 5, 1, 7, 2, 6];
+  $c = [1, 1, 2, 2, 1, 2, 2, 3, 1, 3, 2, 1, 1, 4, 2, 4, 1, 5, 2, 7, 1, 6, 2, 5, 1, 7, 2, 6];
 
-  $D = [];
 
-  for ($x = 0; $x < sizeof($C); $x++) {
-    array_push($D, $vardai[array_search($C[$x], $C) % 2 === 0]);
-    array_push($D, $pavardes[array_search($C[$x], $C) % 2 !== 0]);
+  function namesFn(array $vardai, array $pavardes, array $c)
+  {
+    $d = [];
+    for ($x = 0; $x < count($c); $x += 2) {
+      array_push($d, $vardai[$c[$x] - 1] . ' ' . $pavardes[$c[$x + 1] - 1]);
+    }
+
+    var_dump($d);
   }
 
-  print_r($D);
-
+  namesfn($vardai, $pavardes, $c);
 
   echo '<br>';
   echo '<br>';
@@ -308,7 +323,7 @@ echo "<p><b>e)</b></p>";
 
 
 
-  include 'convert.php';
+  include '/wamp64/www/Web_kursai/libs/convert.php';
 
   function konvertuoti(int|float $ka, string $kaip)
   {
@@ -340,27 +355,34 @@ echo "<p><b>e)</b></p>";
   konvertuoti(100, 'kg');
 
 
-  // function konvertuoti(int|float $kiekis, string $kaip)
-  // {
-  //   switch ($kaip) {
-  //   }
-  //   echo $ats;
-  // }
 
-  // konvertuoti(100, 'kg');
-
-
-  // function konvertuoti(int|float $temp, string $ka) {
-  //   switch($ka) {
-  //    
-  //   }
-  //   echo $ats;
-  // }
-
-  // konvertuoti(100, 'celcijus');
+  echo '<br>';
+  echo '<br>';
+  echo '<br>';
 
 
 
+  include '/wamp64/www/Web_kursai/libs/Car.php';
+  
+
+  $automobilis = new Car();
+
+  $automobilis->spalva = 'Raudona';
+  $automobilis->greitis = 50;
+
+  echo $automobilis->gautiSpalva();
+  echo '<br>';
+  $automobilis->vaziuoti();
+  echo '<hr>';
+  $automobilis->dureles = 4;
+  $automobilis->dureliuSkaicius();
+  echo '<br>';
+  echo '<br>';
+  echo '<hr>';
+  $automobilis->kuroBakas = 65;
+
+
+  
   ?>
 
 
